@@ -1,0 +1,263 @@
+/*
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none; 
+}
+.container{
+    width: 85%;
+    margin: auto;
+
+}
+
+.header {
+    background-image: url(../img/623d8e42393ffa094ce26929_image-hero-background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Cairo', sans-serif;
+}
+
+.overlay{
+    height: 100vh;
+    background: rgba(0,0,0,.3);
+    background-image: linear-gradient(0deg,rgba(0,0,0,.5) 0,transparent 60%,rgba(0,0,0,.5));
+    
+}
+
+.prices{
+    color:  rgba(241, 236, 236, 0.849);
+    padding-top: 5%;
+    align-items: center;
+}
+
+.offer{
+    border:  rgb(44, 44, 44) solid 2px;
+    background-color: rgba(27, 27, 27, 0.836);
+    text-align: center;
+    margin: 5%;
+    padding: 2%;
+}
+
+.offer h2{
+    padding-bottom: 4%;
+    font-size: 35px;
+}
+
+.offer p{
+    font-family: 'Cairo', sans-serif;
+    font-size: 20px;
+}
+.offer .list_fet{
+    text-align: left;
+}
+
+.offer button{
+    border:   rgb(44, 44, 44) solid 1px;
+    background-color: rgba(241, 236, 236, 0.849) ;
+    color: rgb(44, 44, 44);
+    padding: 2%;
+    padding-right: 7%;
+    padding-left: 7%;
+    font-size: 18px;
+}
+
+.offer button:hover{
+    background-color: rgba(44, 44, 44,0.849);
+    color:  rgba(241, 236, 236, 0.849);
+
+}
+
+i{
+    margin-right: 5%;
+}
+
+
+.contact{
+    border-bottom: 8px solid #333;
+
+}
+
+.contact-cont{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.contact-cont img{
+    width:40%;
+}
+
+.contain{
+    margin: 10%;
+    text-align: left;
+}
+
+.contain h2{
+    color: #3766c7;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.contain p{
+    margin-top: 9px;
+    margin-bottom: 37px;
+    color: #b8b8b8;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.cont{
+    overflow: hidden;
+    width: 70%;
+    padding: 35px 35px 25px;
+    float: left;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 0 8px 0 rgb(0 0 0 / 13%);
+    color: #000;
+}
+
+.cont h3{
+    margin-bottom: 16px;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.cont p{
+    color: #949494;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.cont h4{
+    color: #949494;
+    font-size: 13px;
+    line-height: 19px;
+    font-weight: 400;
+}
+
+.cont .info{
+    color: red;
+}
+*/
+
+
+nav{
+    background-color:rgba(0, 0, 0, 0.493);
+    font-family: 'Anton', sans-serif;
+}
+
+
+.header {
+    background-image: url(../img/5e3447aec45382e96c5a6117_active-adult-athlete-body-416778.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Cairo', sans-serif;
+}
+
+
+.overlay{
+    height: 100vh;
+    background: rgba(0,0,0,.3);
+    background-image: linear-gradient(0deg,rgba(0,0,0,.5) 0,transparent 60%,rgba(0,0,0,.5));
+    
+}
+
+.cont{
+    display: flex;
+}
+
+.info{
+    transform: translateY(60%);
+    width: 56%;
+    padding: 3%;
+    background-color: white;
+    border-radius: 13px;
+}
+
+.info h2{
+    color: #3d3d3d;
+}
+
+.info .bt{
+    text-align: right;
+}
+
+.info .btn{
+    color: #0fa8e488 ;
+    border: 1px solid #0fa8e488 ;
+    transition: .4s ease;
+}
+
+.info .btn:hover{
+    color: white;
+    background-color:#0fa8e488 ;
+}
+
+.info .form-floating input{
+    color: #3d3d3d;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 2px solid #0fa8e488;
+    transition: .4s ease;
+    box-shadow: none;
+}
+
+.info label{
+    color: #3d3d3d;
+    box-shadow: none;
+}
+
+
+
+
+
+
+footer{
+    background-color:#1d1d1d;
+    color: #f0f8ff;
+    font-size: 20px;
+    padding-bottom: 4%;
+    padding-left: 7%;
+    padding-top: 5%;
+}
+
+footer a {
+    color:#0fa8e488;
+    text-decoration: none;
+}
+
+footer .col h4{
+    font-size: 15px;
+}
+
+footer .col h3{
+    font-size: 16px;
+    color: #0fa8e488;
+    font-weight: 600;
+}
+
+footer .col p{
+    font-size: 18px;
+    color: #0fa8e488;
+    transition: .3s ease;
+}
+
+footer .col p:hover{
+    transform: scale(1.05);
+    text-decoration-line: underline;
+}
