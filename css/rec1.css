@@ -5,6 +5,18 @@ nav{
     font-family: 'Anton', sans-serif;
 }
 
+.secnav{
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.secnav img{   
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
 
 header {
     background-image: url(../img/southwestern-stuffed-sweet-potatoes-1664306627961-feature.webp);
