@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+nav
+{
+    background-color:black;
+    font-family: 'Anton', sans-serif;
+
+}
+ 
+
+header video
+{
+    background-size: cover;
+    width: 100%;
+}
+header
+{
+   background-color: black;
+    border-bottom: 8px solid #222;
+}
+.section2 img ,.section3 img
+{
+    padding-left: 30px;
+    padding-top: 100px;
+    float: left;
+    padding-right: 3%;
+}
+.section2 ,.section3
+{
+    background-color:black;
+    height: 600px;
+    border-bottom: 8px solid #222;
+}
+section .ourstory
+{
+    font-size: 20px;
+    color: gray;
+    padding-top: 150px;
+    
+}
+section .write .d
+{
+    
+    color: white;
+    font-family: Exo, sans-serif;
+    font-size: 1.953em;
+    line-height: 1.563;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+.nav-item2 a
+{
+    margin-top: 3%;
+    padding: 4px 30px 4px;
+}
+
+.buttons a 
+{
+    background-color: #0fa8e4e0;
+    text-decoration:none;
+    text-transform: capitalize;
+    padding: 12px 20px 12px;
+    border-radius: 5%;
+    color: #222;
+    margin-left: 1%;
+}
+.buttons 
+{
+    text-align: center;
+}
+.buttons
+{
+    margin-top: 3%;
+}
+.inside video
+{
+    margin-left: 10%;
+    height: 428px;
+    margin-top: 8%;
+}
+.imagewithoverlay
+{
+    
+    border-bottom: 8px solid #222;
+}
+.secforimg
+{
+    background-image: url("../img/t1.png");
+    height: 400px;
+    background-size: cover;
+    background-attachment:fixed;
+    z-index: 10;
+    position: relative;
+   border-bottom: 20px solid black;
+}
+.overlay
+{
+   
+    background-color:#2b2d42ba;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    top: 0%;
+    z-index: 1;
+
+}
+.overlay1
+{
+   
+    background-color:#239ece61;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    top: 0%;
+    z-index: 1;
+    height:860px ;
+    
+
+}
+
+.wr h1
+{
+    
+    margin-top: 0px;
+    margin-bottom: 0.26em;
+    font-family: 'Anton', sans-serif;
+    font-size: 60px;
+    line-height: 1.25;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: white;
+    letter-spacing: 3px; 
+
+}
+
+.list
+{
+    padding-top: 4%;
+    background-color: black;
+    padding-bottom: 750px;
+}
+
+.row .col-lg-3
+{
+    overflow: hidden;
+    margin-top: 2%;
+}
+
+
+.row .col-lg-3 img
+{
+    transition: all 2.5 ease;
+    
+    border-radius: 5%;
+   
+}
+.row .col-lg-3 
+{
+    border-radius: 5%; 
+}
+.row .col-lg-3 img:hover
+{
+    transform: scale(1.1);
+   
+    transition: all 2.5 ease;
+   
+}
+.image1
+{
+    position: relative;
+}
+.inner {
+position: absolute;
+background-color:#2b2d429d;
+top: 0%;
+ bottom:0% ;
+ margin-left: 30%;
+ padding-left: 10%;
+ padding-right: 10%;
+ margin-top: 25%;
+ margin-bottom: 30%;
+ border-radius: 30%;
+
+}
+.inner h3
+{
+    margin-top: 15%;
+    color: white;
+}
+
+.question
+{
+    padding:5% 20% 6%;
+    background-color:black;
+    color:#0fa8e4e0;
+    
+}
+.accordion-item
+{
+    box-shadow:none;
+    border: 0;
+}
+.accordion-body
+{
+    background-color:#0fa8e488;
+    
+}
+footer{
+    background-color:#1d1d1d;
+    color: #f0f8ff;
+    font-size: 20px;
+    padding-bottom: 4%;
+    padding-left: 7%;
+    padding-top: 5%;
+}
+footer a {
+    color:#0fa8e488;
+    text-decoration: none;
+}
