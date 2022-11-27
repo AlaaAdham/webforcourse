@@ -32,6 +32,7 @@ header {
     transform: translateY(55%);
 }
 .info{
+    border-radius: 20px;
     width: 60%;
     padding: 3%;
     background-color: white;  
@@ -66,8 +67,53 @@ header {
 }
 
 .other-cont{
-    text-align: center;
+    opacity: 0;
+    border-radius: 20px;
+    width: 40%;
     background-color: white;
     padding: 3%;
     margin-left: 15%;
+    transition: .5s ease;
+}
+.other-cont:hover{
+    opacity: 1;
+}
+.other-cont h2{
+    padding-bottom: 10%;
+}
+
+
+footer{
+    background-color:#1d1d1d;
+    color: #f0f8ff;
+    font-size: 20px;
+    padding-bottom: 4%;
+    padding-left: 7%;
+    padding-top: 5%;
+}
+
+footer a {
+    color:#0fa8e488;
+    text-decoration: none;
+}
+
+footer .col h4{
+    font-size: 15px;
+}
+
+footer .col h3{
+    font-size: 16px;
+    color: #0fa8e488;
+    font-weight: 600;
+}
+
+footer .col p{
+    font-size: 18px;
+    color: #0fa8e488;
+    transition: .3s ease;
+}
+
+footer .col p:hover{
+    transform: scale(1.05);
+    text-decoration-line: underline;
 }
