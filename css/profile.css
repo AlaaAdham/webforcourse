@@ -23,16 +23,21 @@ header{
     border-bottom: 1px solid #5f5f5f;
 }
 
-.cont{
+header .cont{
     margin-top: 10%;
     display: flex;
     margin-bottom: 3%;
     align-items: center;
 }
 
+.cont .side{
+    display: flex;
+    flex-direction: column;
+}
+
 .cont .prof-info{
     display: flex;
-    width: 70%;
+    width: 90%;
     align-items: center;
 
 }
@@ -47,16 +52,14 @@ header{
     padding-left: 5%;
     font-size: 35px;
 }
-.cont .edit{
-    width: 30%;
-}
 
 .cont .edit a h3{
+    text-align: center;
     color: #5f5f5f;
-    font-size: 20px;
+    font-size: 17px;
     border: 2px solid #5f5f5f;
     border-radius: 25px;
-    padding: 2%;
+    padding: 5%;
     width: fit-content;
     transition: .3s ease;
 }
@@ -64,6 +67,43 @@ header{
 .cont .edit a h3:hover{
     transform: scale(1.09);
 }
+
+section{
+    padding-bottom: 2%;
+}
+
+.prog{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+}
+
+.prog .item{
+    transition: .3s ease;
+}
+
+.prog .item img{
+    top: 0px;
+    left: 0px;
+    width: 295px;
+    height: 393px;
+    z-index: 1;
+    object-fit: cover;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.prog .item:hover{
+    transform: scale(1.05);
+}
+
+.section .cont h2{
+    padding-top: 5%;
+    padding-bottom: 2%;
+    color: #424141;
+    font-size: 25px;
+}
+
 
 footer{
     background-color:#1d1d1d;

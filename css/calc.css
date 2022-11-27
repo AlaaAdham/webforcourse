@@ -75,9 +75,7 @@ header {
     margin-left: 15%;
     transition: .5s ease;
 }
-.other-cont:hover{
-    opacity: 1;
-}
+
 .other-cont h2{
     padding-bottom: 10%;
 }
