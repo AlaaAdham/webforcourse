@@ -1,0 +1,38 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.slides
+{
+    display: flex;
+    width:500%;
+    height: 500px;
+}
+.slides input
+{
+    display: none;
+    transition: 2s;
+}
+.prog1image
+{
+    position: relative;
+}
+.details1{
+    position: absolute;
+    background-color:rgba(194, 189, 189, 0.53);
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    top: 0%;
+    width: 440px;
+    z-index: 1;
+    border-radius: 5%;
+    opacity: 0;
+    transition: .3s ease;
+}
+.details1:hover
+{opacity: 2;
+    transition: .3s ease;
+}
+
