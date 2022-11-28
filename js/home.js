@@ -1,9 +1,22 @@
+TweenMax.defaultEase = Linear.easeOut;
 
-const wr=document.querySelector(".section2");
-const f=document.querySelector("#f");
-document.getElementsByClassName(cont).style.back
-const t=new TimelineMax();
+new fullpage("#fullpage", {
+  //options here
+  navigation: true,
+  onLeave: (origin, destination, direction) => {
+    const section = destination.item;
+    const tl = new TimelineMax({ delay: 1 });
+    if (destination.index === 1) {
+      const pic = document.querySelectorAll("#pic");
+      const description = document.querySelector(".ourstory");
+      tl.fromTo(pic, 1.5, { x: "-100%" }, { x: "5%"  })
+        .fromTo(
+          description,
+          0.5,
+          { opacity: 0, y: "50" },
+          { y: "0", opacity: 1 }
+        );
+    }
+  }
+});
 
-t.fromTo(wr,2,{opacity:0, x:30},{opacity:1, x:0},"-=0.5")
-.fromTo(wr,1,{height:"0%"},{height:"100%",ease:Power2.easeInOut})
-;
