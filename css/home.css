@@ -279,7 +279,6 @@ top: 0%;
     overflow: hidden;
     white-space: nowrap;
     animation: typing 3s ease-in-out infinite;
-    font-size: 1.6rem;
     width: 0;
 }
 
