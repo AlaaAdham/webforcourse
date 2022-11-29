@@ -275,7 +275,6 @@ top: 0%;
 }
 
 
-/*
 .list h2{
     overflow: hidden;
     white-space: nowrap;
@@ -284,10 +283,29 @@ top: 0%;
     width: 0;
 }
 
+.textsec5 h1{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s ease-in-out infinite;
 
+}
+
+.textsec6 h1{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s ease-in-out infinite;
+
+}
+
+.textsec7 h1{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s ease-in-out infinite;
+
+}
 @keyframes typing {
     from { width: 0 }
-    to { width: 50% }
-  }*/
+    to { width: 100% }
+}
 
  
