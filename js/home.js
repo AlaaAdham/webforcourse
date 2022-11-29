@@ -2,7 +2,8 @@ TweenMax.defaultEase = Linear.easeOut;
 
 new fullpage("#fullpage", {
   //options here
-  navigation: true,
+  autoScrolling: false,
+  navigation: false,
   onLeave: (origin, destination, direction) => {
     const section = destination.item;
     const tl = new TimelineMax({ delay: 1 });
@@ -19,4 +20,9 @@ new fullpage("#fullpage", {
     }
   }
 });
-
+function autoPlay(){
+    var myVideo = document.getElementById('c73d1fa3-afab-6d19-20f7-0464e5fff552-video');
+      myVideo.loop = true;
+}
+//...
+myVideo.play();

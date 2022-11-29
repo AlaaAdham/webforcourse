@@ -29,12 +29,11 @@ nav
    background-color: black;
     border-bottom: 8px solid #222;
 }
+
 .section{
     background-color:black;
-    height: 600px;
     border-bottom: 8px solid #222;
 }
-
 .section2 img ,.section3 img{
     padding-left: 20px;
     padding-top: 100px;
