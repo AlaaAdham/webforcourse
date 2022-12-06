@@ -1,3 +1,90 @@
+<?php
+session_start();
+$var_value=$_SESSION['username'];
+if((!isset($_POST['fieldname'])|| ($_POST['fieldname']==''))||(!isset($_POST['fieldpass'])&&($_POST['fieldconf'])))
+{
+?>
+<h1>error</h1>
+<?php
+}
+else
+{
+ if(isset($_POST['fieldname']))
+{
+  $name=$_POST['fieldname'];
+  try{
+    
+    {
+      $db=new mysqli('localhost','root','','qgym');
+    $str="SELECT * FROM `Clients`";
+    $res=$db->query($str);
+    for($i=0;$i<$res->num_rows;$i++)
+    {
+        $row=$res->fetch_object();
+        if($row->UserName==$var_value)
+        { 
+
+           if($name==$row->UserName)
+           {
+             echo "this username is not valid";
+           }
+            
+          
+          else
+          {
+          $sql = "UPDATE Clients SET UserName='$name' WHERE UserName='$var_value'";
+          $res=$db->query($sql);
+          $_SESSION['username']=$name;
+          }
+
+          }
+      }
+    
+    }
+    
+  }
+
+  catch(Exception $e)
+  {
+
+  }
+}
+
+
+if(isset($_POST['fieldpass'])&&($_POST['fieldconf']))
+{
+  $pass=$_POST['fieldpass'];
+  $conf=$_POST['fieldconf'];
+  try{
+    if($pass==$conf)
+    {
+  $db=new mysqli('localhost','root','','qgym');
+    $str="SELECT * FROM `Clients`";
+    $res=$db->query($str);
+    for($i=0;$i<$res->num_rows;$i++)
+    {
+        $row=$res->fetch_object();
+        if($row->UserName==$var_value)
+        {
+          $sql = "UPDATE Clients SET Password=SHA1('$pass') WHERE UserName='$var_value'";
+          $res=$db->query($sql);
+          }
+          }
+        }
+        if($pass!=$conf)
+        {
+        ?>
+        <h1 style="color:aqua;">unconform pass</h1>
+        <?php
+      }
+    }
+  catch(Exception $e)
+  {
+  }
+}
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,32 +132,32 @@
     </nav>
     
     <div class="header">
-        <div class="container">
+        <form class="container" action="edit.php" method="POST">
             <div class="cont">
                 <div class="info">
                     <h2>Edit Your Personal Info</h2>
                     <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="username" onclick="design(id)" onmouseout="normal(id)" placeholder="username">
+                    <input type="text" class="form-control" id="username" onclick="design(id)" onmouseout="normal(id)" placeholder="username" name="fieldname">
                     <label for="username">User Name</label>
                     </div>
-
                     <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="Password" onclick="design(id)" onmouseout="normal(id)" placeholder="Password">
+                    <input type="password" class="form-control" id="Password" onclick="design(id)" onmouseout="normal(id)" placeholder="Password" name="fieldpass">
                     <label for="Password">New Password</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="conPassword" onclick="design(id)" onmouseout="normal(id)" placeholder="conPassword">
+                    <input type="password" class="form-control" id="conPassword" onclick="design(id)" onmouseout="normal(id)" placeholder="conPassword" name="fieldconf">
                     <label for="conPassword">Confirm Your New Password</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="phonenum" onclick="design(id)" onmouseout="normal(id)" placeholder="phonenum">
+                    <input type="text" class="form-control" id="phonenum" onclick="design(id)" onmouseout="normal(id)" placeholder="phonenum" name="fieldphone">
                     <label for="phonenum">Phone Number</label>
+                  
                     </div>
 
                     
-                <a class="btn"  href="#">Edit</a>
+                <input type="submit" value="submit" name="sub1">
                 
 
                 </div>
@@ -82,8 +169,8 @@
                         <h3 onclick="resetImg()">Remove Your Photo</h3>
                     </div>
                 </div>
-            </div>
-        </div>
+
+</form>
     </div>
 
     <footer id="foot">
@@ -123,6 +210,8 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  
     <script src="js/edit.js"></script>
     
 </body>
