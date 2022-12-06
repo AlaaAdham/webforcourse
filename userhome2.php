@@ -1,6 +1,6 @@
 <?php
   // Create database connection
-  $db = mysqli_connect("localhost", "root", "", "image_upload");
+  $db = mysqli_connect("localhost", "root", "", "qgym");
 
   $result = mysqli_query($db, "SELECT * FROM images");
   ?>
@@ -84,7 +84,7 @@
   <section>
     <h1 style="color:grey; margin-top:2%; margin-bottom: 2%; font-family: 'Montserrat Alternates', sans-serif;">Workout Programs</h1>
      
-<div class="header-cont" style="display:grid; grid-template-columns: auto auto auto auto; gap: 10px;" style="width:100%">
+<div class="header-cont" style=" margin-left:2%; display:grid; grid-template-columns: auto auto auto auto; gap: 10px;" style="width:100%">
 <?php
     while ($row = mysqli_fetch_array($result)) {
 echo "<div class='col-lg-4'>";
