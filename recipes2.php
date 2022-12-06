@@ -126,7 +126,7 @@
 <?php   
 echo "<div class='pic' style='display: grid; grid-template-columns: auto auto auto auto;'>";
   // Create database connection
-  $db = mysqli_connect("localhost", "root", "", "image_upload");
+  $db=new mysqli('localhost','root','','qgym');
   $result = mysqli_query($db, "SELECT * FROM recipes");
 $c=0;
     while ($row = mysqli_fetch_array($result)) {

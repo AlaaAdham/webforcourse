@@ -1,7 +1,7 @@
 
 <?php
 $name=$_POST['recName'];
-$db = mysqli_connect("localhost", "root", "", "image_upload");
+$db=new mysqli('localhost','root','','qgym');
 $result = mysqli_query($db, "SELECT * FROM recipes WHERE name='" . $name . "'");
 $c=0;
 ?>
@@ -54,7 +54,7 @@ $c=0;
         </div>
     </nav>
     <?php
-              $db = mysqli_connect("localhost", "root", "", "image_upload");
+              $db=new mysqli('localhost','root','','qgym');
               $result = mysqli_query($db, "SELECT * FROM recipes WHERE name='" . $name . "'");
               while ($row = mysqli_fetch_array($result)) {
               echo"<header style='background-image: url(recipes/".$row['imgI']."); background-position: center; background-size: cover; position: relative; width: 100%; height: 100vh;'>";
@@ -63,7 +63,7 @@ $c=0;
         <div class="container">
             <div class="cont">
               <?php
-              $db = mysqli_connect("localhost", "root", "", "image_upload");
+              $db=new mysqli('localhost','root','','qgym');
               $result = mysqli_query($db, "SELECT * FROM recipes WHERE name='" . $name . "'");
               while ($row = mysqli_fetch_array($result)) {
               echo"<h2>".$row['name']."</h2>";
@@ -72,7 +72,7 @@ $c=0;
                 <div class="info">
                     <div class="info-cont">
               <?php
-              $db = mysqli_connect("localhost", "root", "", "image_upload");
+              $db=new mysqli('localhost','root','','qgym');
               $result = mysqli_query($db, "SELECT * FROM recipes WHERE name='" . $name . "'");
               while ($row = mysqli_fetch_array($result)) {
               echo"<h3>".$row['prepT']."min</h3>";
@@ -82,7 +82,7 @@ $c=0;
                     </div>
                     <div class="info-cont">
               <?php
-              $db = mysqli_connect("localhost", "root", "", "image_upload");
+              $db=new mysqli('localhost','root','','qgym');
               $result = mysqli_query($db, "SELECT * FROM recipes WHERE name='" . $name . "'");
               while ($row = mysqli_fetch_array($result)) {
               echo"<h3>".$row['cookT']."min</h3>";
@@ -102,7 +102,7 @@ $c=0;
                     <h3>Ingredients</h3>
                     <div class="ing">
               <?php
-              $db = mysqli_connect("localhost", "root", "", "image_upload");
+              $db=new mysqli('localhost','root','','qgym');
               $result = mysqli_query($db, "SELECT * FROM recipes WHERE name='" . $name . "'");
               while ($row = mysqli_fetch_array($result)) {
               echo"<h4>".$row['ingred']."</h4>";
@@ -115,7 +115,7 @@ $c=0;
                     <h3>Steps</h3>
                     <div class="step">
               <?php
-              $db = mysqli_connect("localhost", "root", "", "image_upload");
+              $db=new mysqli('localhost','root','','qgym');
               $result = mysqli_query($db, "SELECT * FROM recipes WHERE name='" . $name . "'");
               while ($row = mysqli_fetch_array($result)) {
               echo"<p>".$row['step']."</p>";
@@ -131,7 +131,7 @@ $c=0;
         <div class="cont">
             <div class="img-cont">
               <?php
-              $db = mysqli_connect("localhost", "root", "", "image_upload");
+              $db=new mysqli('localhost','root','','qgym');
               $result = mysqli_query($db, "SELECT * FROM recipes WHERE name='" . $name . "'");
               while ($row = mysqli_fetch_array($result)) {
               echo "<img src='recipes/".$row['img-1']."' alt='' style='width: 395px; height: 493px;'>";

@@ -1,7 +1,7 @@
 
 <?php
   // Create database connection
-  $db = mysqli_connect("localhost", "root", "", "image_upload");
+  $db=new mysqli('localhost','root','','qgym');
 
   // Initialize message variable
   $msg = "";
@@ -187,7 +187,7 @@ echo "</div>";
   ?>
 
 <?php
- $db = mysqli_connect("localhost", "root", "", "image_upload"); 
+ $db=new mysqli('localhost','root','','qgym'); 
  // Initialize message variable
  $msg = "";
  // If upload button is clicked ...
