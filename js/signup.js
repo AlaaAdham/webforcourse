@@ -9,13 +9,4 @@ function normal(x){
   
 
 }
-function correctpass()
-{
-    if(document.getElementById('Password')!=document.getElementById('conPassword'))
-    {
-        document.getElementById('coc').style.visibility="visible";
-    }
-    else
-    document.getElementById('conc').style.visibility="hidden";
 
-}

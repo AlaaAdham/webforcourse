@@ -1,28 +1,27 @@
 <?php
 session_start();
 if(isset($_POST['password'])&&($_POST['password'])&&($_POST['sub']))
-{$name=$_POST['username'];
-    $txtpass=$_POST['password'];
+{$passmanager=sha1('0569380317');
+$name=$_POST['username'];
+$txtpass=$_POST['password'];
     try{
         $db=new mysqli('localhost','root','','qgym');
-        $str="SELECT * FROM `Clients`";
+        $str="SELECT * FROM Clients";
         $res=$db->query($str);
         for($i=0;$i<$res->num_rows;$i++)
         {
             $row=$res->fetch_object();
-            if(($row->UserName==$name) && ($row->Password==SHA1($txtpass)))
+            if($row->UserName=='AlaaM' && $row->Password==$passmanager)
+            {
+              header('Location:manager.php');
+            }
+            else if(($row->UserName==$name && $row->Password==SHA1($txtpass)))
             {
               $_SESSION['username'] = $name;
-              header('Location:userhome.html');
-            
+              header('Location:home2.php');
+            break;
             }
-        else{
-              ?>
-              <h1 style="color:gold; font-size:40px;">Error</h1>
-              
-              <?php
-            
-            }
+           
 
         }
         $db->close();
@@ -31,9 +30,22 @@ if(isset($_POST['password'])&&($_POST['password'])&&($_POST['sub']))
     catch(Exception $e)
     { 
       ?>
-      <h1 style="color:blue; font-size:40px;">Error</h1>
       
-      <?php
+              <div class="col-sm-12" style="margin-top:4% ;">
+      <div class="alert fade alert-simple alert-danger alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show" role="alert" data-brk-library="component__alert">
+       
+                <span aria-hidden="true">
+                  <i class="fa fa-times danger "></i>
+                </span>
+                <span class="sr-only">Close</span>
+              </button>
+        <i class="start-icon far fa-times-circle faa-pulse animated"></i>
+        <strong class="font__weight-semibold">ERROR</strong>
+      </div>
+    </div>
+             <?php
+      
+      
     }
 }
 ?>
@@ -48,108 +60,55 @@ if(isset($_POST['password'])&&($_POST['password'])&&($_POST['sub']))
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/logIn.css">
+    <style>
+      .alert-simple.alert-danger
+{
+  border: 1px solid rgba(241, 6, 6, 0.81);
+    background-color: rgba(220, 17, 1, 0.16);
+    box-shadow: 0px 0px 2px #ff0303;
+    color: #ff0303;
+   
+  transition:0.5s;
+  cursor:pointer;
+}
+
+.alert-danger:hover
+{
+     background-color: rgba(220, 17, 1, 0.33);
+  transition:0.5s;
+}
+
+.danger
+{
+      font-size: 18px;
+    color: #ff0303;
+    text-shadow: none;
+}
+
+    </style>
 </head>
 <body>
-  <!--
-    <header class="header">
-        <div class="overlay">
-            <div class="container">
-
-            <div class="prices row">
-                <div class="offer col">
-                    <h2>Standard</h2>
-                    <h3>$30.00</h3>
-                    <p> Beginers</p>
-
-                    <div class="list_fet">
-                        <ul class="list">
-                            <li class="list_item"> <i class="fa-solid fa-check"></i> One Month</li>
-                        </ul>
-                        <ul class="list">
-                            <li class="list_item"> <i class="fa-solid fa-check"></i> 3 lessons per week</li>
-                        </ul>
-                        <ul class="list">
-                            <li class="list_item"> <i class="fa-solid fa-check"></i> 12 hour per month </li>
-                        </ul>
-                        <ul class="list">
-                            <li class="list_item"> <i class="fa-solid fa-check"></i> Personal Trainer assist</li>
-                        </ul>
-                    </div>
-
-                    <button> Subscribe Now</button>
-                </div>
-                <div class="offer col">
-                    <h2>Fit Plus</h2>
-                    <h3>$60.00</h3>
-                    <p>Most popular</p>
-
-                    <div class="list_fet">
-                        <ul class="list">
-                            <li class="list_item"> <i class="fa-solid fa-check"></i> Three Month</li>
-                        </ul>
-                        <ul class="list">
-                            <li class="list_item"> <i class="fa-solid fa-check"></i> 6 lessons per week</li>
-                        </ul>
-                        <ul class="list">
-                            <li class="list_item"> <i class="fa-solid fa-check"></i> 24 hour per month </li>
-                        </ul>
-                        <ul class="list">
-                            <li class="list_item"> <i class="fa-solid fa-check"></i> Personal Trainer assist</li>
-                        </ul>
-                    </div>
-
-                    <button> Subscribe Now</button>
-
-                </div>
-                <div class="offer col">
-                    <h2>Goals</h2>
-                    <h3>$100.00</h3>
-                    <p>Best deal</p>
-
-                    <div class="list_fet">
-                        <ul class="list">
-                            <li class="list_item"> <i class="fa-solid fa-check"></i> Six Month</li>
-                        </ul>
-                        <ul class="list">
-                            <li class="list_item"> <i class="fa-solid fa-check"></i> 6 lessons per week</li>
-                        </ul>
-                        <ul class="list">
-                            <li class="list_item"> <i class="fa-solid fa-check"></i> 24 hour per month </li>
-                        </ul>
-                        <ul class="list">
-                            <li class="list_item"> <i class="fa-solid fa-check"></i> Personal Trainer assist</li>
-                        </ul>
-                    </div>
-
-                    <button> Subscribe Now</button>
-
-                </div>
-            </div>
-
-            </div>
-        </div>
-    </header>
-  -->
+ 
     
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand ms-5" href="home.html"><img src="img/01.10.2022_17.10.41_REC.png" height="50px" width= "100px" ></a>
+        <a class="navbar-brand ms-5" href="home.php"><img src="img/01.10.2022_17.10.41_REC.png" height="50px" width= "100px" ></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto me-4 "><!--ms for left-->
             <li class="nav-item ms-4">
-              <a class="nav-link text-white" aria-current="page" href="home.html">Home</a>
+              <a class="nav-link text-white" aria-current="page" href="home.php">Home</a>
             </li>
             <li class="nav-item ms-4">
-              <a class="nav-link text-white " href="#">About US</a>
+              <a class="nav-link text-white " href="home.php#aboutss">About US</a>
             </li>
             <li class="nav-item ms-4">
-              <a class="nav-link text-white " href="recipes.html">Recipes</a>
+              <a class="nav-link text-white " href="recipes.php">Recipes</a>
             </li>
             <li class="nav-item ms-4">
-              <a class="nav-link text-white " href="#">Contact Us</a>
+              <a class="nav-link text-white " href="home.php#foot">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -173,7 +132,6 @@ if(isset($_POST['password'])&&($_POST['password'])&&($_POST['sub']))
                 </div>
 
                 <div class="bt">
-                <span style="color:red" id="gogo">تت</span>
                 <input type="submit" value="login" class="btn btn-outline-info" name="sub">
                 
                 </div>

@@ -34,23 +34,26 @@ nav
     background-color:black;
     border-bottom: 8px solid #222;
 }
-.section2 img ,.section3 img{
-    padding-left: 20px;
+.section2 img {
+    padding-left: 10px;
     padding-top: 100px;
     float: left;
     padding-right: 5%;
 }
-.section2, .section3
+
+.section2
 {
     background-color:black;
     height: 600px;
     border-bottom: 8px solid #222;
 }
+
 section .ourstory
 {
     font-size: 20px;
     color: gray;
     padding-top: 150px;
+    
     
 }
 section .write .d
@@ -87,12 +90,8 @@ section .write .d
 {
     margin-top: 3%;
 }
-.inside video
-{
-    margin-left: 10%;
-    height: 428px;
-    margin-top: 8%;
-}
+
+
 .imagewithoverlay
 {
     
@@ -130,9 +129,7 @@ section .write .d
     bottom: 0%;
     top: 0%;
     z-index: 1;
-    height:860px ;
-    
-
+    height:830px;
 }
 
 .wr h1
@@ -222,56 +219,39 @@ top: 0%;
     background-color:#0fa8e488;
     
 }
-.footer{
+footer{
     background-color:#1d1d1d;
     color: #f0f8ff;
     font-size: 20px;
     padding-bottom: 4%;
-    padding-left: 3%;
+    padding-left: 7%;
     padding-top: 5%;
 }
 
-.footer a {
+footer a {
     color:#0fa8e488;
     text-decoration: none;
 }
 
-.footer .col h4{
+footer .col h4{
     font-size: 15px;
 }
 
-.footer .col h3{
+footer .col h3{
     font-size: 16px;
     color: #0fa8e488;
     font-weight: 600;
 }
 
-.footer .col p{
+footer .col p{
     font-size: 18px;
     color: #0fa8e488;
     transition: .3s ease;
 }
 
-.footer .col p:hover{
+footer .col p:hover{
     transform: scale(1.05);
     text-decoration-line: underline;
-}
-.footer .col-lg-2 i {
-    background-color: #2c3e50;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    color: #fff;
-    padding: 15px 20px;
-}
-.footer .col-lg-2 i:hover
-{
-    background-color: white;
-    color: black;
-    transition: .3s ease;
-}
-.footer .row
-{
-  margin-right: 5%;  
 }
 
 
@@ -307,4 +287,3 @@ top: 0%;
     to { width: 100% }
 }
 
- 
